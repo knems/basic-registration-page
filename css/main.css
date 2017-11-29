@@ -1,21 +1,145 @@
 .content {
-	width: 95%;
+	font-family: Merriweather;
+	font-size: .9em;
+	width: 92%;
 	margin: 0 auto;
 }
-
 nav {
+	background-color: #30303e;
 	width: 100%;
 	margin: 0 auto;
+	padding-top: 25px;
+	padding-bottom: 25px;
 	text-align: center;
 	text-transform: uppercase;
+	font-size: 1.4em;
+	font-weight: bold;
+	color: white;
 }
-
+header, footer {
+	text-align: center;
+}
+.heading-style {
+	color: #30303e;
+	margin-top: 25px;
+	margin-bottom: 15px;
+}
+header p {
+	color: #97979e;
+	width: 80%;
+	margin: 0 auto;
+}
+hr {
+	position: relative;
+	border: none;
+	border-bottom: medium solid #30303e;
+	margin-top: 30px;
+}
+header hr:before {
+	content: " ";
+	position: absolute;
+	z-index: -1;
+	bottom: 3px;
+	left: 0px;
+	right: 0px;
+	border-bottom: thick solid #30303e;
+}
+fieldset {
+	margin-top: 20px;
+}
+label {
+	color: #595964;
+	margin: 10px auto;
+	font-size: 1.1em;
+}
+input,
+select,
+textarea {
+	background-color: #f2f2f3;
+	border-radius: 3px;
+	border-width: 0;
+	text-indent: 1em;
+	width: 100%;
+	margin: 0 auto;
+}
+textarea {
+	height: 80px;
+	margin: 15px auto;
+}
+form input,
+textarea{
+	padding-top: 12px;
+	padding-bottom: 12px;
+	padding-left: 0px;
+	padding-right: 0px;
+}
+select {
+	height: 42px;
+}
+input[id="zip_code"] {
+	width: 150px;
+	margin-left: 0;
+}
+input:focus,
+select:focus,
+textarea:focus {
+	outline: none;
+	border: 2px solid #141462;
+}
+input::placeholder {
+	text-indent: calc(100% - 85px);
+	font-weight: 100;
+	font-style: italic;
+}
 input,
 label {
 	display: block;
 }
-
 input[type="checkbox"],
-input[type="checkbox"] + label {
-	display: inline;
+input[type="checkbox"] + label,
+input[type="radio"],
+input[type="radio"] + label {
+	width: auto;
+	display: inline-block;
+	margin: 8px auto;
+}
+fieldset:last-of-type label[for]:not(:nth-last-child(2)) {
+	margin-left: 6px;
+}
+[type="button"] {
+	height: 60px;
+	font-size: 1.3em;
+	color: #fff;
+	background-color: #66b2b2;
+}
+footer {
+	color: #97979e;
+	margin: 30px auto;
+}
+
+@media (min-width:768px) {
+	.content {
+		width: 699px;
+	}
+	.primary input,
+	.primary label,
+	.primary select {
+		display: inline-block;
+		margin: 15px auto;
+	}
+	.primary label {
+		width: 30%;
+	}
+	.primary input,
+	.primary select {
+		width: 65%;
+	}
+	#zip_code {
+		width: 150px;
+	}
+	.secondary h1,
+	.secondary label {
+		margin-top: 30px;
+	}
+
 }
