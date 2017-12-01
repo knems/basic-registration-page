@@ -16,7 +16,8 @@ nav {
 	font-weight: bold;
 	color: white;
 }
-header, footer {
+header,
+footer {
 	text-align: center;
 }
 .heading-style {
@@ -48,9 +49,18 @@ fieldset {
 	margin-top: 20px;
 }
 label {
+	transition: all 1s ease-in-out;
+}
+label,
+.form-label {
 	color: #595964;
 	margin: 10px auto;
 	font-size: 1.1em;
+}
+input,
+label,
+.form-label {
+	display: block;
 }
 input,
 select,
@@ -61,13 +71,15 @@ textarea {
 	text-indent: 1em;
 	width: 100%;
 	margin: 0 auto;
+	border: 2px solid rgba(0,0,0,0);
+	transition: all .2s ease;
 }
 textarea {
 	height: 80px;
 	margin: 15px auto;
 }
 form input,
-textarea{
+textarea {
 	padding-top: 12px;
 	padding-bottom: 12px;
 	padding-left: 0px;
@@ -87,13 +99,11 @@ textarea:focus {
 	border: 2px solid #141462;
 }
 input::placeholder {
-	text-indent: calc(100% - 85px);
 	font-weight: 100;
 	font-style: italic;
 }
-input,
-label {
-	display: block;
+input[placeholder*="Required"]::placeholder {
+	text-indent: calc(100% - 85px);
 }
 input[type="checkbox"],
 input[type="checkbox"] + label,
@@ -123,11 +133,13 @@ footer {
 	}
 	.primary input,
 	.primary label,
-	.primary select {
+	.primary select,
+	.primary .form-label {
 		display: inline-block;
 		margin: 15px auto;
 	}
-	.primary label {
+	.primary label,
+	.primary .form-label {
 		width: 30%;
 	}
 	.primary input,
@@ -138,7 +150,8 @@ footer {
 		width: 150px;
 	}
 	.secondary h1,
-	.secondary label {
+	.secondary label,
+	.secondary .form-label {
 		margin-top: 30px;
 	}
 
